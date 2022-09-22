@@ -19,6 +19,12 @@
     <Filter Include="univalue">
       <UniqueIdentifier>{18fbbe42-f4f8-43d5-a917-b72656fa57de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="compat">
+      <UniqueIdentifier>{8c3eddaf-545e-4b65-a5cf-826586379e4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="support">
+      <UniqueIdentifier>{1d1c3a16-ba43-47cc-8c3a-00118a5e7c83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\consensus\amount.h">
@@ -34,9 +40,6 @@
       <Filter>account</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\uint256.h" />
-    <ClInclude Include="..\..\src\util\random.h">
-      <Filter>util</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\util\spanparsing.h">
       <Filter>util</Filter>
     </ClInclude>
@@ -57,6 +60,85 @@
       <Filter>univalue</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\base58.h" />
+    <ClInclude Include="..\..\src\hash.h" />
+    <ClInclude Include="..\..\src\compat\assumptions.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\compat\byteswap.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\compat\compat.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\compat\cpuid.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\compat\endian.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\compat\stdin.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\aes.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\chacha_poly_aead.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\chacha20.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\common.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\hkdf_sha256_32.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\hmac_sha256.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\hmac_sha512.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\muhash.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\poly1305.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\ripemd160.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\sha1.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\sha3.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\sha256.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\sha512.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\siphash.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\support\allocators\secure.h">
+      <Filter>support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\support\allocators\zeroafterfree.h">
+      <Filter>support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\support\cleanse.h">
+      <Filter>support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\support\events.h">
+      <Filter>support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\support\lockedpool.h">
+      <Filter>support</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\primitives\block.cpp">
@@ -67,9 +149,6 @@
     </ClCompile>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\..\src\uint256.cpp" />
-    <ClCompile Include="..\..\src\util\random.cpp">
-      <Filter>util</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\util\spanparsing.cpp">
       <Filter>util</Filter>
     </ClCompile>
@@ -92,5 +171,72 @@
       <Filter>univalue</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\base58.cpp" />
+    <ClCompile Include="..\..\src\hash.cpp" />
+    <ClCompile Include="..\..\src\compat\stdin.cpp">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\aes.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\chacha_poly_aead.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\chacha20.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\hkdf_sha256_32.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\hmac_sha256.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\hmac_sha512.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\muhash.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\poly1305.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\ripemd160.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha1.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha3.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha256.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha256_arm_shani.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha256_avx2.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha256_sse4.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha256_sse41.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha256_x86_shani.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha512.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\siphash.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\support\cleanse.cpp">
+      <Filter>support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\support\lockedpool.cpp">
+      <Filter>support</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

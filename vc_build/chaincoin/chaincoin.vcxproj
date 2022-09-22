@@ -49,7 +49,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -64,7 +64,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -78,29 +78,77 @@
   <ItemGroup>
     <ClInclude Include="..\..\src\account\account.h" />
     <ClInclude Include="..\..\src\base58.h" />
+    <ClInclude Include="..\..\src\compat\assumptions.h" />
+    <ClInclude Include="..\..\src\compat\byteswap.h" />
+    <ClInclude Include="..\..\src\compat\compat.h" />
+    <ClInclude Include="..\..\src\compat\cpuid.h" />
+    <ClInclude Include="..\..\src\compat\endian.h" />
+    <ClInclude Include="..\..\src\compat\stdin.h" />
     <ClInclude Include="..\..\src\consensus\amount.h" />
+    <ClInclude Include="..\..\src\crypto\aes.h" />
+    <ClInclude Include="..\..\src\crypto\chacha20.h" />
+    <ClInclude Include="..\..\src\crypto\chacha_poly_aead.h" />
+    <ClInclude Include="..\..\src\crypto\common.h" />
+    <ClInclude Include="..\..\src\crypto\hkdf_sha256_32.h" />
+    <ClInclude Include="..\..\src\crypto\hmac_sha256.h" />
+    <ClInclude Include="..\..\src\crypto\hmac_sha512.h" />
+    <ClInclude Include="..\..\src\crypto\muhash.h" />
+    <ClInclude Include="..\..\src\crypto\poly1305.h" />
+    <ClInclude Include="..\..\src\crypto\ripemd160.h" />
+    <ClInclude Include="..\..\src\crypto\sha1.h" />
+    <ClInclude Include="..\..\src\crypto\sha256.h" />
+    <ClInclude Include="..\..\src\crypto\sha3.h" />
+    <ClInclude Include="..\..\src\crypto\sha512.h" />
+    <ClInclude Include="..\..\src\crypto\siphash.h" />
+    <ClInclude Include="..\..\src\hash.h" />
     <ClInclude Include="..\..\src\primitives\block.h" />
     <ClInclude Include="..\..\src\primitives\transaction.h" />
     <ClInclude Include="..\..\src\span.h" />
+    <ClInclude Include="..\..\src\support\allocators\secure.h" />
+    <ClInclude Include="..\..\src\support\allocators\zeroafterfree.h" />
+    <ClInclude Include="..\..\src\support\cleanse.h" />
+    <ClInclude Include="..\..\src\support\events.h" />
+    <ClInclude Include="..\..\src\support\lockedpool.h" />
     <ClInclude Include="..\..\src\uint256.h" />
     <ClInclude Include="..\..\src\univalue\include\univalue.h" />
     <ClInclude Include="..\..\src\univalue\include\univalue_escapes.h" />
     <ClInclude Include="..\..\src\univalue\include\univalue_utffilter.h" />
-    <ClInclude Include="..\..\src\util\random.h" />
     <ClInclude Include="..\..\src\util\spanparsing.h" />
     <ClInclude Include="..\..\src\util\strencodings.h" />
     <ClInclude Include="..\..\src\util\string.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\base58.cpp" />
+    <ClCompile Include="..\..\src\compat\stdin.cpp" />
+    <ClCompile Include="..\..\src\crypto\aes.cpp" />
+    <ClCompile Include="..\..\src\crypto\chacha20.cpp" />
+    <ClCompile Include="..\..\src\crypto\chacha_poly_aead.cpp" />
+    <ClCompile Include="..\..\src\crypto\hkdf_sha256_32.cpp" />
+    <ClCompile Include="..\..\src\crypto\hmac_sha256.cpp" />
+    <ClCompile Include="..\..\src\crypto\hmac_sha512.cpp" />
+    <ClCompile Include="..\..\src\crypto\muhash.cpp" />
+    <ClCompile Include="..\..\src\crypto\poly1305.cpp" />
+    <ClCompile Include="..\..\src\crypto\ripemd160.cpp" />
+    <ClCompile Include="..\..\src\crypto\sha1.cpp" />
+    <ClCompile Include="..\..\src\crypto\sha256.cpp" />
+    <ClCompile Include="..\..\src\crypto\sha256_arm_shani.cpp" />
+    <ClCompile Include="..\..\src\crypto\sha256_avx2.cpp" />
+    <ClCompile Include="..\..\src\crypto\sha256_sse4.cpp" />
+    <ClCompile Include="..\..\src\crypto\sha256_sse41.cpp" />
+    <ClCompile Include="..\..\src\crypto\sha256_x86_shani.cpp" />
+    <ClCompile Include="..\..\src\crypto\sha3.cpp" />
+    <ClCompile Include="..\..\src\crypto\sha512.cpp" />
+    <ClCompile Include="..\..\src\crypto\siphash.cpp" />
+    <ClCompile Include="..\..\src\hash.cpp" />
     <ClCompile Include="..\..\src\primitives\block.cpp" />
     <ClCompile Include="..\..\src\primitives\transaction.cpp" />
+    <ClCompile Include="..\..\src\support\cleanse.cpp" />
+    <ClCompile Include="..\..\src\support\lockedpool.cpp" />
     <ClCompile Include="..\..\src\uint256.cpp" />
     <ClCompile Include="..\..\src\univalue\lib\univalue.cpp" />
     <ClCompile Include="..\..\src\univalue\lib\univalue_get.cpp" />
     <ClCompile Include="..\..\src\univalue\lib\univalue_read.cpp" />
     <ClCompile Include="..\..\src\univalue\lib\univalue_write.cpp" />
-    <ClCompile Include="..\..\src\util\random.cpp" />
     <ClCompile Include="..\..\src\util\spanparsing.cpp" />
     <ClCompile Include="..\..\src\util\strencodings.cpp" />
     <ClCompile Include="..\..\src\util\string.cpp" />
