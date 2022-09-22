@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="crypto">
+      <UniqueIdentifier>{1acc0b17-2053-4298-b82e-9467c4e863fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="primitives">
+      <UniqueIdentifier>{71d6533d-fab1-4a3e-a658-5482a83601b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="consensus">
+      <UniqueIdentifier>{fa608b1c-8677-43f5-bec5-4abf42a880a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="account">
+      <UniqueIdentifier>{d3d822a3-f3e7-4172-9d66-7162d1ee005d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{6e3d4f10-8e62-46c6-9c30-a4b3b587111d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="univalue">
+      <UniqueIdentifier>{18fbbe42-f4f8-43d5-a917-b72656fa57de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\consensus\amount.h">
+      <Filter>consensus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\primitives\block.h">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\primitives\transaction.h">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\account\account.h">
+      <Filter>account</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\uint256.h" />
+    <ClInclude Include="..\..\src\util\random.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\util\spanparsing.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\util\strencodings.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\span.h" />
+    <ClInclude Include="..\..\src\util\string.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\univalue\include\univalue.h">
+      <Filter>univalue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\univalue\include\univalue_escapes.h">
+      <Filter>univalue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\univalue\include\univalue_utffilter.h">
+      <Filter>univalue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\base58.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\primitives\block.cpp">
+      <Filter>primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\primitives\transaction.cpp">
+      <Filter>primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\..\src\uint256.cpp" />
+    <ClCompile Include="..\..\src\util\random.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\spanparsing.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\strencodings.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\string.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\univalue\lib\univalue.cpp">
+      <Filter>univalue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\univalue\lib\univalue_get.cpp">
+      <Filter>univalue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\univalue\lib\univalue_read.cpp">
+      <Filter>univalue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\univalue\lib\univalue_write.cpp">
+      <Filter>univalue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\base58.cpp" />
+  </ItemGroup>
+</Project>

@@ -3,3 +3,5 @@
 ################################################################################
 
 /vc_build/chaincoin/.vs/chaincoin
+/.vs
+/vc_build/chaincoin/x64/Debug
