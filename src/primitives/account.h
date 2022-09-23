@@ -2,11 +2,11 @@
 
 
 
-//Á´±ÒÀàĞÍ
+//é“¾å¸ç±»å‹
 struct CAccount
 {
-    CAmount         nValue;            // Ä¿±êÕÊºÅ
-    uint32_t        nSequence;          // ĞòÁĞºÅ
+    CAmount         nValue;            // ç›®æ ‡å¸å·
+    uint32_t        nSequence;          // åºåˆ—å·
 };
 
 

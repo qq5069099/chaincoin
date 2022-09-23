@@ -4,24 +4,24 @@
 #include <uint256.h>
 #include "transaction.h"
 
-//¿éÍ·Àà
+//å—å¤´ç±»
 class CBlockHeader
 {
-    int16_t         nVersion;           // °æ±¾ºÅ
-    uint32_t        nIndex;             // ¿éË÷Òı
-    uint256         hashPrevBlock;      // Ç°Ò»¸öÇø¿éµÄhash
-    uint256         hashMerkleRoot;     // ½»Ò×MerkleÊ÷¸ù
-    uint256         hashMerkleAccount;  // ÕË»§MerkleÊ÷¸ù
-    uint32_t        nTime;              // Ê±¼ä´Á
-    uint32_t        nBits;              // POWÄÑ¶È
-    uint64_t        nNonce;             // ÒªÕÒµÄËæ»úÊı
+    int16_t         nVersion;           // ç‰ˆæœ¬å·
+    uint32_t        nIndex;             // å—ç´¢å¼•
+    uint256         hashPrevBlock;      // å‰ä¸€ä¸ªåŒºå—çš„hash
+    uint256         hashMerkleRoot;     // äº¤æ˜“Merkleæ ‘æ ¹
+    uint256         hashMerkleAccount;  // è´¦æˆ·Merkleæ ‘æ ¹
+    uint32_t        nTime;              // æ—¶é—´æˆ³
+    uint32_t        nBits;              // POWéš¾åº¦
+    uint64_t        nNonce;             // è¦æ‰¾çš„éšæœºæ•°
 };
 
-//¿éÀà
+//å—ç±»
 class CBlock : public CBlockHeader
 {
-    std::vector<CTransaction> vtx;       // ËùÓĞµÄ½»Ò×
-    std::vector<CAccount> vAccount;       // ËùÓĞµÄ½»Ò×
+    std::vector<CTransaction> vtx;       // æ‰€æœ‰çš„äº¤æ˜“
+    std::vector<CAccount> vAccount;       // æ‰€æœ‰çš„äº¤æ˜“
 
 };
 

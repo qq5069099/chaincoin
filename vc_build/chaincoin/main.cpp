@@ -1,4 +1,4 @@
-
+ï»¿
 #include <uint256.h>
 #include <hash.h>
 #include <primitives/block.h>
@@ -22,7 +22,7 @@ int main()
 
 	std::string addr = EncodeBase58Check(vv);
 
-	//²âÊÔÐÞ¸Ä
+	//æµ‹è¯•ä¿®æ”¹
 
 	//222
 

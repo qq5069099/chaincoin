@@ -6,14 +6,14 @@
 #include "account.h"
 
 
-//½»Ò×Àà
+//äº¤æ˜“ç±»
 class CTransaction
 {
-    int8_t          nVersion;           // °æ±¾ºÅ
-    uint32_t        nSequence;          // ĞòÁĞºÅ
-    CAccount        accTo;              // Ä¿±êÕÊºÅ
-    CAmount         nValue;             // Êä³ö½ğ¶î
-    uint256         scriptSig;          // ½âËø½Å±¾
-    uint32_t        nLockTime;          // Ëø¶¨Ê±¼ä
+    int8_t          nVersion;           // ç‰ˆæœ¬å·
+    uint32_t        nSequence;          // åºåˆ—å·
+    CAccount        accTo;              // ç›®æ ‡å¸å·
+    CAmount         nValue;             // è¾“å‡ºé‡‘é¢
+    uint256         scriptSig;          // è§£é”è„šæœ¬
+    uint32_t        nLockTime;          // é”å®šæ—¶é—´
 };
 
