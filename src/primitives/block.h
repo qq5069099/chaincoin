@@ -20,8 +20,8 @@ class CBlockHeader
 //块类
 class CBlock : public CBlockHeader
 {
-    std::vector<CTransaction> vtx;       // 所有的交易
-    std::vector<CAccount> vAccount;       // 所有的交易
+    std::vector<CTransaction> vtx{ 21 };       // 所有的交易
+    std::vector<CAccount> vAccount{ 3 };       // 所有的交易
 
 };
 

@@ -1,12 +1,16 @@
 #include <uint256.h>
 
 
+//账号地址
+using CAccountAddr= uint256;
 
-//链币类型
+
+//账号类型
 struct CAccount
 {
-    CAmount         nValue;            // 目标帐号
-    uint32_t        nSequence;          // 序列号
+    CAccountAddr    addr;            // 账号地址
+    CAmount         nValue;          // 帐号余额
+    uint32_t        nLastSequence;   // 最后序号
 };
 
 
