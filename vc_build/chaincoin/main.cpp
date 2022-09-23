@@ -22,6 +22,8 @@ int main()
 
 	std::string addr = EncodeBase58Check(vv);
 
+	//²âÊÔĞŞ¸Ä
+
 	return 0;
 }
 
