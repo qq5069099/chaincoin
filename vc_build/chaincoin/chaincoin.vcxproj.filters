@@ -139,6 +139,7 @@
     <ClInclude Include="..\..\src\support\lockedpool.h">
       <Filter>support</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\blockMgr.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\primitives\block.cpp">
@@ -238,5 +239,6 @@
     <ClCompile Include="..\..\src\support\lockedpool.cpp">
       <Filter>support</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\blockMgr.cpp" />
   </ItemGroup>
 </Project>

@@ -78,6 +78,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\src\account\account.h" />
     <ClInclude Include="..\..\src\base58.h" />
+    <ClInclude Include="..\..\src\blockMgr.h" />
     <ClInclude Include="..\..\src\compat\assumptions.h" />
     <ClInclude Include="..\..\src\compat\byteswap.h" />
     <ClInclude Include="..\..\src\compat\compat.h" />
@@ -119,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\base58.cpp" />
+    <ClCompile Include="..\..\src\blockMgr.cpp" />
     <ClCompile Include="..\..\src\compat\stdin.cpp" />
     <ClCompile Include="..\..\src\crypto\aes.cpp" />
     <ClCompile Include="..\..\src\crypto\chacha20.cpp" />
