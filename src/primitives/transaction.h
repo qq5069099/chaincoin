@@ -14,6 +14,7 @@ class CTransaction
     uint256         scriptSig;          // 签名字符串
     CAccountAddr    toAddr;             // 锁定脚本
     CAmount         nValue;             // 输出金额
+    CAmount         nFree;              // 输出金额
 
     uint32_t        nLockTime;          // 锁定时间
 };
