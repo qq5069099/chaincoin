@@ -9,7 +9,7 @@
 
 int main()
 {
-	CBlockHeader b;
+	CBlock b;
 
 	std::string s = "03dd9859a23571a513d811925669a53d6f3475c197ace390218e0106f497a59fa4";
 	auto v = ParseHex(s);

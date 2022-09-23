@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <uint256.h>
 #include "../consensus/amount.h"
-#include "../account/account.h"
+#include "account.h"
 
 
 //½»Ò×Àà

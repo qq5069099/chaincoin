@@ -10,9 +10,6 @@
     <Filter Include="consensus">
       <UniqueIdentifier>{fa608b1c-8677-43f5-bec5-4abf42a880a3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="account">
-      <UniqueIdentifier>{d3d822a3-f3e7-4172-9d66-7162d1ee005d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="util">
       <UniqueIdentifier>{6e3d4f10-8e62-46c6-9c30-a4b3b587111d}</UniqueIdentifier>
     </Filter>
@@ -35,9 +32,6 @@
     </ClInclude>
     <ClInclude Include="..\..\src\primitives\transaction.h">
       <Filter>primitives</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\account\account.h">
-      <Filter>account</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\uint256.h" />
     <ClInclude Include="..\..\src\util\spanparsing.h">
@@ -140,6 +134,9 @@
       <Filter>support</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\blockMgr.h" />
+    <ClInclude Include="..\..\src\primitives\account.h">
+      <Filter>primitives</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\primitives\block.cpp">

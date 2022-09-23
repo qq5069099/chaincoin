@@ -76,7 +76,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\account\account.h" />
     <ClInclude Include="..\..\src\base58.h" />
     <ClInclude Include="..\..\src\blockMgr.h" />
     <ClInclude Include="..\..\src\compat\assumptions.h" />
@@ -102,6 +101,7 @@
     <ClInclude Include="..\..\src\crypto\sha512.h" />
     <ClInclude Include="..\..\src\crypto\siphash.h" />
     <ClInclude Include="..\..\src\hash.h" />
+    <ClInclude Include="..\..\src\primitives\account.h" />
     <ClInclude Include="..\..\src\primitives\block.h" />
     <ClInclude Include="..\..\src\primitives\transaction.h" />
     <ClInclude Include="..\..\src\span.h" />
