@@ -29,6 +29,7 @@ int main()
 	uniValue.push_backV(vv.begin(), vv.end());
 	std::string ss = uniValue.write();
 
+	//测试椭圆公钥生成
 	secp256k1_context* ctx = secp256k1_context_create(SECP256K1_CONTEXT_SIGN);
 	secp256k1_pubkey pubkey;
 	int ret = secp256k1_ec_pubkey_create(ctx, &pubkey, (const unsigned char*)"54645545454654654645644889875556445546");
