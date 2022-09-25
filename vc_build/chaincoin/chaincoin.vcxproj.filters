@@ -22,6 +22,9 @@
     <Filter Include="support">
       <UniqueIdentifier>{1d1c3a16-ba43-47cc-8c3a-00118a5e7c83}</UniqueIdentifier>
     </Filter>
+    <Filter Include="secp256k1">
+      <UniqueIdentifier>{47be9bb2-ea95-464b-9622-2226fd15ed9d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\consensus\amount.h">
@@ -237,5 +240,14 @@
       <Filter>support</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\blockMgr.cpp" />
+    <ClCompile Include="..\..\src\secp256k1\src\secp256k1.c">
+      <Filter>secp256k1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\secp256k1\src\precomputed_ecmult.c">
+      <Filter>secp256k1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\secp256k1\src\precomputed_ecmult_gen.c">
+      <Filter>secp256k1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
