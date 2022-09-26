@@ -14,7 +14,8 @@ public:
 	int a1;
 	int a2;
 	int a3;
-
+	
+	//静态函数
 	static tagTest fun()
 	{
 		tagTest f;
