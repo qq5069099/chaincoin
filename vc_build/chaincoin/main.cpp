@@ -7,7 +7,22 @@
 #include <univalue.h>
 #include <secp256k1.h>
 
+class tagTest
+{
+public:
+	int a1;
+	int a2;
+	int a3;
+};
 
+
+tagTest fun()
+{
+	tagTest f;
+	f.a1 = 1;
+	f.a2 = 2;
+	return f;
+}
 
 int main()
 {
@@ -40,6 +55,11 @@ int main()
 	secp256k1_ec_pubkey_serialize(ctx, (unsigned char*)vch, &clen, &pubkey, fCompressed ? SECP256K1_EC_COMPRESSED : SECP256K1_EC_UNCOMPRESSED);
 
 	secp256k1_context_destroy(ctx);
+
+	auto [fffffff1, fffffffffff2, fffffffffff3] = fun();
+
+
+
 	return 0;
 }
 
