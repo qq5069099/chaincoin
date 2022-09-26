@@ -1,0 +1,16 @@
+使用到的第三方库列表 :
+
+libevent
+sqlite
+secp256k1
+leveldb	--->/util/crc32c
+univalue
+zeroMQ
+minisketch
+
+
+qt
+boost
+openssl	--->	?
+
+

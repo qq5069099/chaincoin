@@ -3,7 +3,8 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <IncludePath>C:\Users\Administrator\Desktop\chaincoin\src\univalue\include;C:\Users\Administrator\Desktop\chaincoin\src\crc32c\include;C:\Users\Administrator\Desktop\chaincoin\src;C:\Users\Administrator\Desktop\chaincoin\src\secp256k1\include;C:\Users\Administrator\Desktop\chaincoin\src\secp256k1\src;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Administrator\Desktop\chaincoin\src;C:\Users\Administrator\Desktop\chaincoin\src\univalue\include;C:\Users\Administrator\Desktop\chaincoin\src\crc32c\include;C:\Users\Administrator\Desktop\chaincoin\src\secp256k1\src;C:\Users\Administrator\Desktop\chaincoin\src\secp256k1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\vcpkg\installed\x64-windows-static\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup />
   <ItemGroup />
