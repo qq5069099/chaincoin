@@ -30,8 +30,8 @@ int main()
 {
 	CBlock b;
 
-	std::string s = "03dd9859a23571a513d811925669a53d6f3475c197ace390218e0106f497a59fa4";
-	auto v = ParseHex(s);
+	std::string s = "03dd8ae5cf10f9229f76c096cf2b380bb78d9a33e9ff2b71f7ce1930ae3070bed5";
+	std::vector<unsigned char> v = ParseHex(s);
 
 	uint160 u160 = Hash160(v);
 	std::string u160_str = u160.GetHex();
@@ -56,10 +56,15 @@ int main()
 	bool fCompressed = false;
 	secp256k1_ec_pubkey_serialize(ctx, (unsigned char*)vch, &clen, &pubkey, fCompressed ? SECP256K1_EC_COMPRESSED : SECP256K1_EC_UNCOMPRESSED);
 
+	unsigned char vch_fCompressed[33];
+	size_t clen_fCompressed = 33;
+	bool fCompressed_fCompressed = true;
+	secp256k1_ec_pubkey_serialize(ctx, (unsigned char*)vch_fCompressed, &clen_fCompressed, &pubkey, fCompressed_fCompressed ? SECP256K1_EC_COMPRESSED : SECP256K1_EC_UNCOMPRESSED);
+
 	secp256k1_context_destroy(ctx);
 
 	//语法测试
-	auto [fffffff1, fffffffffff2, fffffffffff3] = fun();
+	auto [fffffff1, fffffffffff2, fffffffffff3] = tagTest::fun();
 
 
 

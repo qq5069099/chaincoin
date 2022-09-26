@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <IncludePath>C:\Users\Administrator\Desktop\chaincoin\src\secp256k1\include;C:\Users\Administrator\Desktop\chaincoin\src\univalue\include;C:\Users\Administrator\Desktop\chaincoin\src\crc32c\include;C:\Users\Administrator\Desktop\chaincoin\src;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Administrator\Desktop\chaincoin\src\univalue\include;C:\Users\Administrator\Desktop\chaincoin\src\crc32c\include;C:\Users\Administrator\Desktop\chaincoin\src;C:\Users\Administrator\Desktop\chaincoin\src\secp256k1\include;C:\Users\Administrator\Desktop\chaincoin\src\secp256k1\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup />
   <ItemGroup />
