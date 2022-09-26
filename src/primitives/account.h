@@ -1,3 +1,4 @@
+#pragma once
 #include <uint256.h>
 
 
