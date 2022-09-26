@@ -1,0 +1,27 @@
+使用到的第三方库列表 :
+
+boost		可移植的 C++ 标准库，号称为第二std库
+Signals2	基于Boost的,实现了线程安全的观察者模式
+QT			跨平台界面模块，可以编译成手机运行
+ZeroMQ		多对多网络库:更轻量级，使用ZeroMQ时可以不关注网络细节。
+libevent	网络库:轻量级，高性能，事件触发，提供了一个简单的，可集成到应用程序中的HTTP服务器，为创建RPC服务器和客户端创建了一个RPC框架，能自动的封装和解封数据结构。
+LevelDB 	一个google实现的非常高效的kv数据库
+OpenSSL		安全套接层，整个软件包大概可以分成三个主要的功能部分：SSL协议库、应用程序以及密码算法库。OpenSSL的目录结构自然也是围绕这三个功能部分进行规划的。
+sqlite		是一个开源轻量级的嵌入式关系数据库，是遵守ACID的关系型数据库管理系统，它包含在一个相对小的C库中。从发布至2021年已经接近有21个年头，SQLite也迎来了一个版本 SQLite 3已经发布。
+Minisketch	使比特币节点之间的数据同步变得更容易 
+
+使用到的第三方库列表 :
+libevent
+sqlite
+secp256k1
+leveldb	--->/util/crc32c
+univalue
+zeroMQ
+minisketch		迷你素描
+
+
+qt
+boost
+openssl	--->	?
+
+
