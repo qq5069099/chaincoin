@@ -13,16 +13,16 @@ public:
 	int a1;
 	int a2;
 	int a3;
+
+	static tagTest fun()
+	{
+		tagTest f;
+		f.a1 = 1;
+		f.a2 = 2;
+		return f;
+	}
 };
 
-
-tagTest fun()
-{
-	tagTest f;
-	f.a1 = 1;
-	f.a2 = 2;
-	return f;
-}
 
 int main()
 {
@@ -56,6 +56,7 @@ int main()
 
 	secp256k1_context_destroy(ctx);
 
+	//语法测试
 	auto [fffffff1, fffffffffff2, fffffffffff3] = fun();
 
 
