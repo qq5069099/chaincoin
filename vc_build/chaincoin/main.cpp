@@ -6,6 +6,7 @@
 #include <util/strencodings.h>
 #include <univalue.h>
 #include <secp256k1.h>
+#include <logging.h>
 
 //语法测试
 class tagTest
@@ -66,7 +67,11 @@ int main()
 	//语法测试
 	auto [fffffff1, fffffffffff2, fffffffffff3] = tagTest::fun();
 
-	//
+	//测试日志
+	LogInstance().StartLogging();
+	LogPrintf("sss\n");
+	LogPrintf("%s---%d\n", "val:", 123);
+	LogPrintf("%s---%d\n", "val:", 456);
 
 	return 0;
 }

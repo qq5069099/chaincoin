@@ -140,6 +140,7 @@
     <ClInclude Include="..\..\src\primitives\account.h">
       <Filter>primitives</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\logging.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\primitives\block.cpp">
@@ -249,5 +250,6 @@
     <ClCompile Include="..\..\src\secp256k1\src\precomputed_ecmult_gen.c">
       <Filter>secp256k1</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\logging.cpp" />
   </ItemGroup>
 </Project>

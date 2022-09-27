@@ -101,6 +101,7 @@
     <ClInclude Include="..\..\src\crypto\sha512.h" />
     <ClInclude Include="..\..\src\crypto\siphash.h" />
     <ClInclude Include="..\..\src\hash.h" />
+    <ClInclude Include="..\..\src\logging.h" />
     <ClInclude Include="..\..\src\primitives\account.h" />
     <ClInclude Include="..\..\src\primitives\block.h" />
     <ClInclude Include="..\..\src\primitives\transaction.h" />
@@ -142,6 +143,7 @@
     <ClCompile Include="..\..\src\crypto\sha512.cpp" />
     <ClCompile Include="..\..\src\crypto\siphash.cpp" />
     <ClCompile Include="..\..\src\hash.cpp" />
+    <ClCompile Include="..\..\src\logging.cpp" />
     <ClCompile Include="..\..\src\primitives\block.cpp" />
     <ClCompile Include="..\..\src\primitives\transaction.cpp" />
     <ClCompile Include="..\..\src\secp256k1\src\precomputed_ecmult.c" />
