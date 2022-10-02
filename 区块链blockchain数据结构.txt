@@ -1,0 +1,43 @@
+						          序列化 CBlock 数据结构
+----------------------------------------------------------------------------------------------------------------------------------------
+				|				内容							大小(byte)			说明
+-------------------------------------------------------------------------------------------------------------------------------------------
+				|			int32_t nVersion; 							4      		// 块链版本
+				|			uint256 hashPrevBlock;  					32			// 前一个区块的hash
+ CBlockHeader:  |			uint256 hashMerkleRoot;						32			// Merkle树根 - 包含进区块的所有交易构造的Merkle根，调整区块中的交易次序、增删交易、或修改Coinbase交易时改变。　 作者：momoko爱吃桃子呀 https://www.bilibili.com/read/cv620801/ 出处：bilibili
+  (区块头)      |			uint32_t nTime;								4			// 时间戳
+				|			uint32_t nBits;         					4			// POW难度
+				|			uint32_t nNonce;							4			// 要找的随机数
+-------------------------------------------------------------------------------------------------------------------------------------------
+				|			std::vector<CTransactionRef> vtx;       	1-9			// WriteCompactSize 交易列表
+				|				|>const int32_t nVersion;				4			// 交易版本号
+				|				|>const std::vector<CTxIn> vin;			1-9			// WriteCompactSize 输入列表大小
+				|				|	|>COutPoint prevout.hash;(uint256)	32			// 前一笔交易输出的位置 - 哈希
+   CBlock       |				|	|>COutPoint prevout.n;(uint32_t)	4			// 同上为 COutPoint 内容
+  (区块体)      |				|	CScript scriptSig;					1-29		// 解锁脚本
+				| Transaction:  |	uint32_t nSequence;					4			// 序列号
+				|				|>const std::vector<CTxOut> vout;		1-9			// WriteCompactSize 输入列表大小
+				|				|	CAmount nValue;						8			// 输出金额
+				|				|	CScript scriptPubKey;				1-29		// 锁定脚本
+				|				|>const std::vector<CTxIn> vin.stack;	1-9			// CScriptWitness 见证脚本 vector<vector<>> 类型
+				|				|	>const std::vector<CTxIn> vin.stack;1-9			// CScriptWitness 见证脚本字符串长度
+				|				|		>char							1			// CScriptWitness 见证脚本字符串内容
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+谁能够提供一个签名和一个公钥，让这个脚本运行通过，谁就能花费这笔钱
+
+运行脚本：script: 
+sig，pubkey，OP_DUP OP_HASH160 46af3fb4…6829 OP_EQUALVERIFY OP_CHECKSIG
+执行指令OP_CHECKSIG，这条指令会验证签名。首先，我们根据签名类型SIGHASH_ALL（0x01）对整个交易进行验证。验证方法是：
+
+	  block-0 <----|		 block-1 <----|		    block-2 <----|		   block-3 <----|		  block-4	
+	|--------|     |       |--------|     |       |--------|     |       |--------|     |       |--------|           
+    |上块hash|     |-------|上块hash|     |-------|上块hash|     |-------|上块hash|     |-------|上块hash|           
+    |        |             |        |             |        |             |        |             |        |           
+    |        |             |        |             |        |             |        |             |        |           
+    |        |             |        |             |        |             |        |             |        |...................
+    |        |             |        |             |        |             |        |             |        |           
+    |        |             |        |             |        |             |        |             |        |           
+    |        |             |        |             |        |             |        |             |        |           
+    |--------|             |--------|             |--------|             |--------|             |--------|           
+

@@ -1,0 +1,32 @@
+bench_bitcoin：根据https://github.com/bitcoin/bitcoin/issues/829 解释，作用是编译系统更新，也就是检查系统使用的一些加密算法是否有新的更新。
+bitcoin-cli：是Bitcoind的一个功能完备的RPC客户端，包括查询区块，交易信息等等，具体将在相应章节介绍。
+bitcoind：是比特币运行的核心程序俗称bitcoin core，也是我们分析的重点。
+bitcoin-qt：比特币钱包。
+bitcoin-tx：比特币交易处理模块，支持交易的查询和创建。
+test_bitcoin：运行各个模块的测试代码。
+test_bitcoin-qt：运行钱包的模块测试代码。
+
+
+
+---src----源代码文件夹说明:
+bench：基于Microbenchmark（微基准测试）的代码测试模块
+compat：系统适配，大小端，字节操作部分重写，glibc特定函数判断处理。
+config：配置
+consensus：共识模块，merkle计算，分叉规则，一致性验证。
+crypto：安全模块，加密算法，hash算法
+index：交易读写，查询交易数据并同步到leveldb；包括区块链数据索引基础类，其实现了CValidationInterface虚类。
+interfaces：接口模块：事件接口(handler)，钱包功能接口(chain（给client提供获取连状态，接收通知，费率计算，交易确认等接口）,wallet)，节点功能接口(node)；
+leveldb：nosql数据库
+node：在内存池和UTXO集合里查找coin，统计未花费交易输出，提交交易
+policy：费率标准，交易选取规则，交易规则参数定义，rbf交易选择；PS：交易流程：发起交易->交易池->交易桶->写入区块
+primitives：构建区块，输出和输入交易的签名验证
+qt：qt工程
+rpc：网络通信，json协议
+script：签名，交易溯源，交易脚本….
+secp256k1：椭圆曲线数字签名算法
+support：内存控制与管理，服务于内存池
+test：测试代码
+univalue：一致性
+util：杂乱项，client，server环境，时间，url，错误码等
+wallet：钱包类
+zmq：zeroMQ消息队列

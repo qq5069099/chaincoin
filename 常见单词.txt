@@ -1,0 +1,34 @@
+Transaction	交易
+Consensus	共识
+TxMemPool	交易池
+Script		脚本
+signals		信号
+chrono		计时
+
+
+primitives	原语
+Witness		见证,目击者
+proof		求证,验算
+Sequence	序列号
+explicit	明确的
+Amount		金额
+prevector	预防者
+Dust		粉尘,灰尘
+contain		包含
+multiple	多个
+Compute		计算
+descendant	子孙
+Ancestors	祖先
+entry		区块?
+mining		采矿; 采矿业;
+difficulty	困难; 困难程度
+
+Category	分类
+
+
+
+
+
+
+
+

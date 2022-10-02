@@ -74,14 +74,16 @@ int main()
 	LogPrintf("%s---%d\n", "val:", 123);
 	LogPrintf("%s---%d\n", "val:", 456);
 
-	//测试种子到私钥
 	const char* key = "Bitcoin seed";
-	auto seed = ParseHex("9ac2c3a62aff729c05a1f64808b607273fcbd3d67036535c07d7a375aaef7cd0");
+	auto seed = ParseHex("3709f51ed462152e2e9de761fd8f4eccb060595161651b822542dd5b1a35b4524db64056399175ad2d133515357580b85ddc66b8b7a240346d7c0aae83665bb8");
 	unsigned char buf[64] = { 0 };
 	CHMAC_SHA512((const unsigned char* )key, strlen(key)).Write(seed.data(), seed.size()).Finalize(buf);
 	std::string buf333 = EncodeBase58(Span<const unsigned char>(buf, buf + 64));
 	//CHMAC_SHA512{nullptr,0}.Write(seed.data(), seed.size()).Finalize(buf);
 	//std::string buf333 = EncodeBase58(Span<const unsigned char>(buf, buf+32));
+
+
+
 
 
 

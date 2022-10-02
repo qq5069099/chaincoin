@@ -1,0 +1,21 @@
+
+
+
+挖矿节点
+比特币协议要求矿工寻找一个数字,这个数字被称作nonce”,这个数字包括在新区块中，作为矿工的计算“工作量证明”
+用这个数字和区块中的数据相结合,
+并通过哈希函数后得到一个小于难度目标”的数字。
+难度目标由每一个区块设定。
+
+
+7种节点类型J:
+1 SPV wallet,钱包轻量级的钱包
+2 SPV stratum wallet, 使用Stratum协议的轻量级钱包。
+3 Solo Miner,挖矿节点
+4 Full Block Chain Node，全节点
+5 网络路由节点
+6 Pool Protocol Servers, 这个是矿池
+7 Mining Nodes,这是连接到比特币矿池的矿机节点。
+
+交易(CTransaction)，区块(CBlock)，交易池(CTxMemPool),共识(Consensus)，脚本(CScript)
+
